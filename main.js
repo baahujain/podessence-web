@@ -51,20 +51,40 @@ document.querySelectorAll(
     '.feature-card, .step, .testimonial, .section-header, .stat'
 ).forEach(el => el.setAttribute('data-fade', ''));
 
-/* ─── Mobile menu (simplified toggle) ─── */
+/* ─── Mobile menu ─── */
 const burger = document.getElementById('burger');
+const navEl = document.getElementById('nav');
 const navLinks = document.querySelector('.nav__links');
+
+function closeNav() {
+    navEl.classList.remove('nav--open');
+    document.body.classList.remove('menu-open');
+    burger.setAttribute('aria-expanded', 'false');
+}
+
 if (burger) {
     burger.addEventListener('click', () => {
-        const open = navLinks.style.display === 'flex';
-        navLinks.style.cssText = open
-            ? ''
-            : 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(7,7,15,.97);backdrop-filter:blur(16px);padding:1.5rem;gap:1rem;border-bottom:1px solid rgba(255,255,255,.07);z-index:99;';
+        const opening = !navEl.classList.contains('nav--open');
+        navEl.classList.toggle('nav--open', opening);
+        document.body.classList.toggle('menu-open', opening);
+        burger.setAttribute('aria-expanded', String(opening));
     });
-    // close on link click
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-        navLinks.style.cssText = '';
-    }));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    document.addEventListener('click', e => {
+        if (navEl.classList.contains('nav--open') && !navEl.contains(e.target)) closeNav();
+    });
+}
+
+/* ─── Mobile sticky CTA ─── */
+const mobileCta = document.getElementById('mobileCta');
+if (mobileCta) {
+    const heroCta = document.querySelector('.hero__cta');
+    const update = () => {
+        if (!heroCta) { mobileCta.classList.add('visible'); return; }
+        mobileCta.classList.toggle('visible', heroCta.getBoundingClientRect().bottom < 0);
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
 }
 
 /* ─── Phone carousel: auto-cycle every 3s ─── */

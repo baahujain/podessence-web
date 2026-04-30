@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-73VC5VH5HB"></script>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What is podEssence?",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "podEssence is an AI-powered minimalist podcast player that extracts high-signal audio highlights from long-form episodes, allowing users to hear the original voices of creators in a condensed format."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How does podEssence save time?",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By using AI to filter out filler content and intros, podEssence provides a curated 'Essence Mode' that focuses only on the most important insights of a podcast episode."
+            }
+        }]
+        }
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-73VC5VH5HB');
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://podessence.app/faq.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ — podessence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .faq-page {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+        }
+
+        .faq-page h1 {
+            font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+            font-weight: 900;
+            letter-spacing: -.04em;
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--clr-border);
+        }
+
+        .faq-page .faq-intro {
+            color: var(--clr-muted);
+            font-size: var(--text-base);
+            line-height: 1.75;
+            margin-bottom: var(--space-xl);
+        }
+
+        .faq-section {
+            margin-top: var(--space-xl);
+        }
+
+        .faq-section__title {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            letter-spacing: -.02em;
+            color: var(--clr-text);
+            margin-bottom: var(--space-md);
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--clr-border);
+            border-radius: .75rem;
+            overflow: hidden;
+        }
+
+        .faq-item__question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            font-size: var(--text-base);
+            font-weight: 600;
+            color: var(--clr-text);
+            line-height: 1.5;
+        }
+
+        .faq-item__question:hover {
+            background: var(--clr-surface);
+        }
+
+        .faq-item__icon {
+            flex-shrink: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--clr-muted);
+            transition: transform .25s ease;
+        }
+
+        .faq-item.is-open .faq-item__icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-item__answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease, padding .3s ease;
+            padding: 0 1.25rem;
+        }
+
+        .faq-item.is-open .faq-item__answer {
+            max-height: 500px;
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        .faq-item__answer p {
+            color: var(--clr-muted);
+            font-size: var(--text-base);
+            line-height: 1.75;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── NAV ── -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="/" class="nav__logo">
+                <img src="assets/icon-512.png" class="nav__icon" alt="podessence icon" />
+                pod<span>Essence</span>
+            </a>
+            <ul class="nav__links">
+                <li><a href="/#features">Features</a></li>
+                <li><a href="/#how">How it works</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/#contact">Contact Us</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser"
+                        class="btn btn--sm">Get the app</a></li>
+            </ul>
+            <button class="nav__burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── CONTENT ── -->
+    <div class="container faq-page">
+        <h1>Frequently Asked Questions</h1>
+        <p class="faq-intro">Everything you need to know about podEssence. Can't find your answer? Reach us at <strong>podessence.app@gmail.com</strong>.</p>
+
+        <!-- General Information -->
+        <section class="faq-section">
+            <h2 class="faq-section__title">General Information</h2>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        What is podEssence?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>podEssence is an AI-powered minimalist podcast player designed for high-density learning. Unlike traditional summary tools that provide only text, podEssence uses AI to identify "high-signal" highlights from long-form episodes and plays them back in the original creator's voice, allowing you to capture the essence of a conversation in minutes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        How does podEssence differ from other AI podcast summarizers?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>While most tools provide text bullet points, podEssence focuses on audio-first highlights. It preserves the nuance, emotion, and context of the original recording by curating a "short-form" version of the episode that you can listen to, rather than just read.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Features & Functionality -->
+        <section class="faq-section">
+            <h2 class="faq-section__title">Features &amp; Functionality</h2>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        Can I listen to full episodes on podEssence?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Yes. podEssence is a fully functional podcast player. However, it is optimized for the "Essence Mode," which filters out fluff, intros, and filler content to focus on the core insights and actionable takeaways of the episode.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        Is there a way to save specific highlights?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Absolutely. Any "signal" identified by the AI or manually selected by you can be saved to your personal insight library and synced across devices for future reference.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical & Privacy -->
+        <section class="faq-section">
+            <h2 class="faq-section__title">Technical &amp; Privacy</h2>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        Does podEssence collect my listening data?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>We prioritize user privacy. podEssence does not sell your listening habits to third parties. We use your interactions solely to improve the AI's ability to identify high-signal content for your specific interests.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        How accurate is the AI highlight extraction?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Our models are trained specifically on long-form conversational audio. While AI is highly accurate at identifying key themes and transitions, we also provide a "Context Slider" that allows you to expand the audio around a highlight if you want more detail.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="faq-section">
+            <h2 class="faq-section__title">Getting Started</h2>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        Is podEssence free to use?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>podEssence offers a free tier that includes standard podcast playback and a limited number of AI-generated "Essence" extractions per month. Our Premium tier offers unlimited AI highlights and advanced features for power listeners.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        Where can I download the podEssence app?
+                        <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>You can access the player directly at <strong>www.podessence.app</strong> or download the mobile version on the <strong>Google Play Store</strong> (currently in Beta).</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <a href="/" class="nav__logo">pod<span>Essence</span></a>
+            <nav class="footer__nav">
+                <a href="/#features">Features</a>
+                <a href="/#how">How it works</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/#contact">Contact Us</a>
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/terms_of_service.html">Terms of Service</a>
+            </nav>
+            <p class="footer__copy">© 2025 podessence. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.querySelectorAll('.faq-item__question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var item = btn.closest('.faq-item');
+                var isOpen = item.classList.contains('is-open');
+                document.querySelectorAll('.faq-item.is-open').forEach(function (open) {
+                    open.classList.remove('is-open');
+                    open.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+                });
+                if (!isOpen) {
+                    item.classList.add('is-open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

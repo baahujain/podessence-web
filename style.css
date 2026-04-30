@@ -845,6 +845,46 @@ ul {
 }
 
 /* ─────────────────────────────────────────────────────────────────
+   CONTACT
+   ───────────────────────────────────────────────────────────────── */
+.contact {
+    padding-block: var(--space-xl);
+    text-align: center;
+    border-top: 1px solid var(--clr-border);
+}
+
+.contact__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.contact__title {
+    font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: var(--clr-text);
+}
+
+.contact__sub {
+    color: var(--clr-muted);
+    font-size: var(--text-base);
+    max-width: 44ch;
+}
+
+.contact__email {
+    color: var(--clr-text);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    margin-top: .5rem;
+    user-select: all;
+    background: linear-gradient(120deg, rgba(99,102,241,.12) 0%, rgba(168,85,247,.1) 100%);
+    border-radius: .3em;
+    padding: .1em .4em;
+}
+
+/* ─────────────────────────────────────────────────────────────────
    FOOTER
    ───────────────────────────────────────────────────────────────── */
 .footer {

@@ -17,6 +17,43 @@
     <title>podessence — Podcast Highlights, Distilled</title>
     <meta name="description"
         content="podessence curates the best moments from your favourite podcasts so you never miss what matters. Get the essence, skip the noise." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://podessence.app/" />
+    <meta property="og:title" content="podessence — Hear What Matters" />
+    <meta property="og:description" content="podessence curates the best moments from your favourite podcasts so you never miss what matters. Get the essence, skip the noise." />
+    <meta property="og:image" content="https://podessence.app/assets/app_mockup.png" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="podessence — Hear What Matters" />
+    <meta name="twitter:description" content="podessence curates the best moments from your favourite podcasts so you never miss what matters. Get the essence, skip the noise." />
+    <meta name="twitter:image" content="https://podessence.app/assets/app_mockup.png" />
+
+    <!-- Android smart banner (Chrome) -->
+    <meta name="google-play-app" content="app-id=com.bahubalijain.deepgramparser" />
+
+    <!-- Google Search rich result: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "podessence",
+        "description": "podessence curates the best moments from your favourite podcasts so you never miss what matters. Get the essence, skip the noise.",
+        "url": "https://podessence.app/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "installUrl": "https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser",
+        "image": "https://podessence.app/assets/app_mockup.png"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +70,10 @@
         <div class="nav__inner">
             <a href="#" class="nav__logo">
                 <img src="assets/icon-512.png" class="nav__icon" alt="podessence icon" />
-                pod<span>Essence</span>
+                <span class="nav__logo-text">
+                    <span class="nav__logo-name">pod<span class="nav__logo-accent">Essence</span></span>
+                    <span class="nav__tagline">Hear What Matters</span>
+                </span>
             </a>
             <ul class="nav__links">
                 <li><a href="#features">Features</a></li>
@@ -57,7 +97,7 @@
         </div>
         <div class="container hero__content">
             <div class="hero__text">
-                <div class="hero__badge">✦ Now available on Android</div>
+                <a href="https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser" target="_blank" rel="noopener" class="hero__badge">✦ Now available on Android</a>
                 <h1 class="hero__title">
                     The&nbsp;essence of every&nbsp;podcast,<br />
                     <em>without the noise.</em>
@@ -325,7 +365,7 @@
     <!-- ── FOOTER ── -->
     <footer class="footer">
         <div class="container footer__inner">
-            <a href="#" class="nav__logo">pod<span>Essence</span></a>
+            <a href="#" class="nav__logo">pod<span class="nav__logo-accent">Essence</span></a>
             <nav class="footer__nav">
                 <a href="#features">Features</a>
                 <a href="#how">How it works</a>

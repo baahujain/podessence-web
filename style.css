@@ -256,7 +256,7 @@ ul {
     color: var(--clr-text);
     display: flex;
     align-items: center;
-    gap: 0;
+    gap: 8px;
 }
 
 .nav__icon {
@@ -267,8 +267,23 @@ ul {
     flex-shrink: 0;
 }
 
-.nav__logo span {
+.nav__logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 2px;
+}
+
+.nav__logo-accent {
     color: var(--clr-accent2);
+}
+
+.nav__tagline {
+    font-size: 0.55rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--clr-muted, #888);
+    text-transform: uppercase;
 }
 
 .nav__links {
@@ -368,6 +383,13 @@ ul {
     font-weight: 700;
     letter-spacing: .04em;
     margin-bottom: var(--space-md);
+    text-decoration: none;
+    transition: background .2s, border-color .2s;
+}
+
+.hero__badge:hover {
+    background: #DDD6FE;
+    border-color: #C4B5FD;
 }
 
 .hero__title {

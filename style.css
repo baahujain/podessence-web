@@ -167,6 +167,17 @@ ul {
     box-shadow: 0 8px 32px rgba(109, 40, 217, .4);
 }
 
+.btn--secondary {
+    background: #1c1c1e;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+}
+
+.btn--secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .35);
+}
+
 .btn--ghost {
     background: transparent;
     color: var(--clr-muted);
@@ -923,6 +934,10 @@ ul {
     gap: var(--space-md);
 }
 
+.footer__inner .nav__logo {
+    gap: 0;
+}
+
 .footer__nav {
     display: flex;
     gap: var(--space-md);
@@ -972,6 +987,8 @@ ul {
     box-shadow: 0 -4px 24px rgba(109, 40, 217, .1);
     transform: translateY(110%);
     transition: transform .4s var(--ease);
+    flex-direction: row;
+    gap: .75rem;
 }
 
 .mobile-cta.visible {

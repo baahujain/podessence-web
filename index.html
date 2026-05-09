@@ -26,10 +26,10 @@
     <meta property="og:image" content="https://podessence.app/assets/app_mockup.png" />
 
     <!-- Twitter / X Card -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="podessence — Hear What Matters" />
     <meta name="twitter:description" content="podessence curates the best moments from your favourite podcasts so you never miss what matters. Get the essence, skip the noise." />
-    <meta name="twitter:image" content="https://podessence.app/assets/app_mockup.png" />
+    <meta name="twitter:image" content="https://podessence.app/assets/icon-512.png" />
 
     <!-- Android smart banner (Chrome) -->
     <meta name="google-play-app" content="app-id=com.bahubalijain.deepgramparser" />
@@ -43,13 +43,16 @@
         "description": "podessence curates the best moments from your favourite podcasts so you never miss what matters. Get the essence, skip the noise.",
         "url": "https://podessence.app/",
         "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Android",
+        "operatingSystem": ["Android", "iOS"],
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
         },
-        "installUrl": "https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser",
+        "installUrl": [
+            "https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser",
+            "https://apps.apple.com/app/podessence/id6766071552"
+        ],
         "image": "https://podessence.app/assets/app_mockup.png"
     }
     </script>
@@ -97,24 +100,28 @@
         </div>
         <div class="container hero__content">
             <div class="hero__text">
-                <a href="https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser" target="_blank" rel="noopener" class="hero__badge">✦ Now available on Android</a>
                 <h1 class="hero__title">
                     The&nbsp;essence of every&nbsp;podcast,<br />
                     <em>without the noise.</em>
                 </h1>
                 <p class="hero__sub">
-                    The <strong><u>Best Moments</u></strong> from your favourite shows — in the <strong>original voices,
-                        completely
-                        unaltered</strong>. AI picks the highlights; the hosts still do the talking.
+                    Hear the best moments from your favourite podcasts — AI-curated highlights, always in the original voice.
                 </p>
                 <div class="hero__cta">
                     <a href="https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser"
-                        class="btn btn--primary">
+                        target="_blank" rel="noopener" class="btn btn--primary">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M3.18 23.76a2 2 0 0 0 2.2-.22l12.2-7.04-2.83-2.83-11.57 10.09ZM.5 1.5A2 2 0 0 0 0 3v18a2 2 0 0 0 .5 1.5l.08.07 10.09-10.09v-.24L.58 1.43.5 1.5ZM20.85 10.7l-2.9-1.67-3.16 3.16 3.16 3.16 2.92-1.69a2 2 0 0 0 0-2.96ZM5.38.46 17.58 7.5l-2.83 2.83L3.18.24a2 2 0 0 1 2.2.22Z" />
                         </svg>
-                        Download on Google Play
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/podessence/id6766071552"
+                        target="_blank" rel="noopener" class="btn btn--secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        App Store
                     </a>
                     <a href="#how" class="btn btn--ghost">Learn more ↓</a>
                 </div>
@@ -185,8 +192,7 @@
                         </svg>
                     </div>
                     <h3>AI-curated highlights in Original Voice</h3>
-                    <p>Our model scores every segment of a podcast and surfaces only the insights, stories, and ideas
-                        worth your time.</p>
+                    <p>Get the best insights from a 2-hour episode in under 20 minutes — our model scores every segment and surfaces only what's worth your time, in the creator's own voice.</p>
                 </div>
 
                 <div class="feature-card">
@@ -374,19 +380,26 @@
                 <a href="/privacy_policy.html">Privacy Policy</a>
                 <a href="/terms_of_service.html">Terms of Service</a>
             </nav>
-            <p class="footer__copy">© 2025 podessence. All rights reserved.</p>
+            <p class="footer__copy">© 2026 podessence. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- ── MOBILE STICKY CTA ── -->
     <div class="mobile-cta" id="mobileCta">
         <a href="https://play.google.com/store/apps/details?id=com.bahubalijain.deepgramparser"
-            class="btn btn--primary">
+            target="_blank" rel="noopener" class="btn btn--primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="M3.18 23.76a2 2 0 0 0 2.2-.22l12.2-7.04-2.83-2.83-11.57 10.09ZM.5 1.5A2 2 0 0 0 0 3v18a2 2 0 0 0 .5 1.5l.08.07 10.09-10.09v-.24L.58 1.43.5 1.5ZM20.85 10.7l-2.9-1.67-3.16 3.16 3.16 3.16 2.92-1.69a2 2 0 0 0 0-2.96ZM5.38.46 17.58 7.5l-2.83 2.83L3.18.24a2 2 0 0 1 2.2.22Z" />
             </svg>
-            Get it Free — Google Play
+            Google Play
+        </a>
+        <a href="https://apps.apple.com/app/podessence/id6766071552"
+            target="_blank" rel="noopener" class="btn btn--secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            App Store
         </a>
     </div>
 

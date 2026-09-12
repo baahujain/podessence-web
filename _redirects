@@ -1,1 +1,2 @@
 /share/*  https://api.podessence.app/share/:splat  301
+/episode-*  https://pub-91aad5041cd64be6932870e780e89e64.r2.dev/episode-:splat  200!

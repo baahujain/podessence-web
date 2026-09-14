@@ -67,7 +67,27 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap"
         rel="stylesheet" />
     <link rel="icon" type="image/png" href="assets/icon.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=2" />
+    <style>
+        .blog-preview { padding: var(--space-2xl) 0; background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
+        .blog-preview__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .blog-preview-card { background: var(--clr-card); border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s; }
+        .blog-preview-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(109, 40, 217, .12); border-color: rgba(109, 40, 217, .3); }
+        .blog-preview-card__strip { height: 4px; }
+        .blog-preview-card__strip--ai { background: linear-gradient(90deg, #6D28D9, #8B5CF6); }
+        .blog-preview-card__strip--history { background: linear-gradient(90deg, #D97706, #F59E0B); }
+        .blog-preview-card__strip--tech { background: linear-gradient(90deg, #0891B2, #06B6D4); }
+        .blog-preview-card__body { padding: 1.25rem 1.25rem 1rem; flex: 1; display: flex; flex-direction: column; }
+        .blog-preview-card__meta { display: flex; align-items: center; gap: 8px; margin-bottom: .75rem; }
+        .blog-preview-card__tag { font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--clr-accent); background: #EDE9FE; padding: 3px 8px; border-radius: 9999px; }
+        .blog-preview-card__tag--amber { color: #92400E; background: #FEF3C7; }
+        .blog-preview-card__tag--teal { color: #164E63; background: #CFFAFE; }
+        .blog-preview-card__date { font-size: .72rem; color: var(--clr-muted); margin-left: auto; }
+        .blog-preview-card__title { font-size: 1.05rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.4; color: var(--clr-text); margin-bottom: .6rem; }
+        .blog-preview-card__excerpt { font-size: .85rem; color: var(--clr-muted); line-height: 1.6; margin-bottom: 1rem; flex: 1; }
+        .blog-preview-card__cta { font-size: .82rem; font-weight: 700; color: var(--clr-accent); display: inline-flex; align-items: center; gap: 4px; }
+        .blog-preview__more { text-align: center; margin-top: 2.5rem; }
+    </style>
 </head>
 
 <body>
@@ -129,7 +149,7 @@
                         </svg>
                         App Store
                     </a>
-                    <a href="#how" class="btn btn--ghost">Learn more ↓</a>
+                    <a href="#blog" class="btn btn--ghost">Read Insights ↓</a>
                 </div>
             </div>
             <div class="hero__visual">
@@ -183,6 +203,60 @@
                     alt="Featured on PitchWall"
                 />
             </a>
+        </div>
+    </section>
+
+    <!-- ── EDITORIAL / BLOG ── -->
+    <section class="blog-preview" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Editorial Analysis</span>
+                <h2 class="section-title">Insights from the world's best podcasts.</h2>
+                <p class="section-sub">We listen to hours of deep conversations so you get the key ideas, mental models, and breakthrough takeaways distilled into readable essays.</p>
+            </div>
+            <div class="blog-preview__grid">
+                <a class="blog-preview-card" href="/blog/dario-amodei-agi-timelines-anthropic.html">
+                    <div class="blog-preview-card__strip blog-preview-card__strip--ai"></div>
+                    <div class="blog-preview-card__body">
+                        <div class="blog-preview-card__meta">
+                            <span class="blog-preview-card__tag">AI</span>
+                            <span class="blog-preview-card__date">Dwarkesh Patel &bull; Sep 2026</span>
+                        </div>
+                        <h3 class="blog-preview-card__title">Dario Amodei Is 90% Sure AGI Arrives Before 2035 &mdash; Here's His Reasoning</h3>
+                        <p class="blog-preview-card__excerpt">Five sharpest insights from Dario Amodei's 2-hour conversation on AGI timelines, scaling laws, and Anthropic's revenue trajectory.</p>
+                        <span class="blog-preview-card__cta">Read analysis &rarr;</span>
+                    </div>
+                </a>
+
+                <a class="blog-preview-card" href="/blog/dylan-patel-ai-compute-bottlenecks.html">
+                    <div class="blog-preview-card__strip blog-preview-card__strip--tech"></div>
+                    <div class="blog-preview-card__body">
+                        <div class="blog-preview-card__meta">
+                            <span class="blog-preview-card__tag blog-preview-card__tag--teal">Semiconductors</span>
+                            <span class="blog-preview-card__date">Dwarkesh Patel &bull; Sep 2026</span>
+                        </div>
+                        <h3 class="blog-preview-card__title">The $1 Trillion Data Center: Dylan Patel on AI Compute Bottlenecks</h3>
+                        <p class="blog-preview-card__excerpt">Why power &mdash; not chips &mdash; is the real ceiling for AI scaling, what happens when clusters hit gigawatt scale, and the geopolitical choke point.</p>
+                        <span class="blog-preview-card__cta">Read analysis &rarr;</span>
+                    </div>
+                </a>
+
+                <a class="blog-preview-card" href="/blog/why-russia-lost-the-cold-war-sarah-paine.html">
+                    <div class="blog-preview-card__strip blog-preview-card__strip--history"></div>
+                    <div class="blog-preview-card__body">
+                        <div class="blog-preview-card__meta">
+                            <span class="blog-preview-card__tag blog-preview-card__tag--amber">Geopolitics</span>
+                            <span class="blog-preview-card__date">Dwarkesh Patel &bull; Sep 2026</span>
+                        </div>
+                        <h3 class="blog-preview-card__title">Why Russia Lost the Cold War: Sarah Paine's Masterclass in Grand Strategy</h3>
+                        <p class="blog-preview-card__excerpt">Why continental empires fail against maritime powers, the fatal mistake of security paranoia, and what China learned from Soviet collapse.</p>
+                        <span class="blog-preview-card__cta">Read analysis &rarr;</span>
+                    </div>
+                </a>
+            </div>
+            <div class="blog-preview__more">
+                <a href="/blog/" class="btn btn--secondary">Explore all editorial articles &rarr;</a>
+            </div>
         </div>
     </section>
 
@@ -353,26 +427,6 @@
         </div>
     </section>
 
-    <!-- ── DOWNLOAD ── -->
-    <!-- <section class="download" id="download">
-        <div class="container download__inner">
-            <div class="download__orbs">
-                <div class="orb orb--4"></div>
-                <div class="orb orb--5"></div>
-            </div>
-            <h2 class="download__title">Start listening smarter.</h2>
-            <p class="download__sub">Free to download. No algorithm. No ads. Just signal.</p>
-            <a href="https://play.google.com/store" target="_blank" rel="noopener" class="btn btn--primary btn--lg"
-                id="downloadBtn">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M3.18 23.76a2 2 0 0 0 2.2-.22l12.2-7.04-2.83-2.83-11.57 10.09ZM.5 1.5A2 2 0 0 0 0 3v18a2 2 0 0 0 .5 1.5l.08.07 10.09-10.09v-.24L.58 1.43.5 1.5ZM20.85 10.7l-2.9-1.67-3.16 3.16 3.16 3.16 2.92-1.69a2 2 0 0 0 0-2.96ZM5.38.46 17.58 7.5l-2.83 2.83L3.18.24a2 2 0 0 1 2.2.22Z" />
-                </svg>
-                Get it on Google Play
-            </a>
-        </div>
-    </section> -->
-
     <!-- ── CONTACT ── -->
     <section class="contact" id="contact">
         <div class="container contact__inner">
@@ -389,6 +443,7 @@
             <nav class="footer__nav">
                 <a href="#features">Features</a>
                 <a href="#how">How it works</a>
+                <a href="/blog/">Blog</a>
                 <a href="/faq.html">FAQ</a>
                 <a href="https://api.podessence.app/transcriptions">Transcriptions</a>
                 <a href="#contact">Contact Us</a>

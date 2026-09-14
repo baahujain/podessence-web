@@ -1,6 +1,6 @@
 /* ─── Add fade-el class and observe for scroll-in ─── */
 const fadeTargets = document.querySelectorAll(
-    '.feature-card, .step, .testimonial, .section-header, .stat'
+    '.feature-card, .step, .testimonial, .section-header, .stat, .blog-preview-card'
 );
 const io = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
@@ -48,7 +48,7 @@ statNums.forEach(el => statObserver.observe(el));
 
 /* ─── Add data-fade to all sections that should animate in ─── */
 document.querySelectorAll(
-    '.feature-card, .step, .testimonial, .section-header, .stat'
+    '.feature-card, .step, .testimonial, .section-header, .stat, .blog-preview-card'
 ).forEach(el => el.setAttribute('data-fade', ''));
 
 /* ─── Mobile menu ─── */

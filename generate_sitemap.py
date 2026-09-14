@@ -89,7 +89,7 @@ def main():
         + "\n</urlset>\n"
     )
 
-    out_path = "sitemap.xml"
+    out_path = "sitemap-transcripts.xml"
     with open(out_path, "w") as f:
         f.write(sitemap)
 

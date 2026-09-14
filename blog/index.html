@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Podcast Insights &amp; Analysis | podEssence</title>
+    <meta name="description" content="Editorial analysis and curated insights from the world's best podcasts — AI, tech, history, business, and more. Distilled by the podEssence team." />
+    <link rel="canonical" href="https://www.podessence.app/blog/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.podessence.app/blog/" />
+    <meta property="og:title" content="Blog — Podcast Insights &amp; Analysis | podEssence" />
+    <meta property="og:description" content="Editorial analysis and curated insights from the world's best podcasts." />
+    <meta property="og:image" content="https://www.podessence.app/assets/icon-512.png" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-73VC5VH5HB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-73VC5VH5HB');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/assets/icon.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        /* clear fixed nav */
+        .blog-page { padding-top: 72px; }
+
+        /* hero */
+        .blog-hero {
+            background: var(--clr-surface);
+            border-bottom: 1px solid var(--clr-border);
+            padding: 1.75rem 0 1.75rem;
+            text-align: center;
+        }
+        .blog-hero__eyebrow {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #EDE9FE; color: var(--clr-accent);
+            font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+            padding: 4px 12px; border-radius: 9999px; margin-bottom: 1rem;
+        }
+        .blog-hero__title {
+            font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800;
+            letter-spacing: -.04em; line-height: 1.2; margin-bottom: .6rem;
+        }
+        .blog-hero__sub {
+            font-size: .97rem; color: var(--clr-muted); max-width: 480px;
+            margin: 0 auto; line-height: 1.6;
+        }
+
+        /* grid */
+        .blog-section { padding: 1.75rem 0 4rem; }
+        .blog-section__label {
+            font-size: .7rem; font-weight: 700; letter-spacing: .12em;
+            text-transform: uppercase; color: var(--clr-muted); margin-bottom: 1.5rem;
+        }
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+
+        /* card */
+        .post-card {
+            background: var(--clr-card); border: 1px solid var(--clr-border);
+            border-radius: var(--radius-md); display: flex; flex-direction: column;
+            overflow: hidden;
+            transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s;
+        }
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(109,40,217,.1);
+            border-color: rgba(109,40,217,.25);
+        }
+
+        /* card accent strip */
+        .post-card__strip { height: 4px; }
+        .post-card__strip--ai      { background: linear-gradient(90deg, #6D28D9, #8B5CF6); }
+        .post-card__strip--history { background: linear-gradient(90deg, #D97706, #F59E0B); }
+        .post-card__strip--tech    { background: linear-gradient(90deg, #0891B2, #06B6D4); }
+
+        .post-card__body { padding: 1.25rem 1.25rem .75rem; flex: 1; }
+        .post-card__tag-row { display: flex; align-items: center; gap: 8px; margin-bottom: .75rem; }
+        .post-card__tag {
+            font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+            color: var(--clr-accent); background: #EDE9FE; padding: 3px 8px; border-radius: 9999px;
+        }
+        .post-card__tag--amber { color: #92400E; background: #FEF3C7; }
+        .post-card__tag--teal  { color: #164E63; background: #CFFAFE; }
+        .post-card__date { font-size: .72rem; color: var(--clr-muted); margin-left: auto; }
+        .post-card__title {
+            font-size: 1rem; font-weight: 700; letter-spacing: -.02em;
+            line-height: 1.4; color: var(--clr-text); margin-bottom: .5rem;
+        }
+        .post-card__excerpt { font-size: .85rem; color: var(--clr-muted); line-height: 1.65; }
+
+        /* featured card — spans 2 cols on wide screens */
+        .post-card--featured { grid-column: span 2; }
+        .post-card--featured .post-card__title { font-size: 1.2rem; }
+        .post-card--featured .post-card__excerpt { font-size: .9rem; }
+
+        .post-card__footer {
+            padding: .85rem 1.25rem;
+            border-top: 1px solid var(--clr-border);
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .post-card__cta {
+            font-size: .8rem; font-weight: 700; color: var(--clr-accent);
+            display: flex; align-items: center; gap: 4px;
+        }
+        .post-card__cta svg { transition: transform .2s; }
+        .post-card:hover .post-card__cta svg { transform: translateX(3px); }
+        .post-card__mins { font-size: .72rem; color: var(--clr-faint); font-weight: 600; }
+
+        /* featured badge */
+        .badge-featured {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+            color: #fff; background: var(--clr-accent); padding: 3px 8px; border-radius: 9999px;
+        }
+
+        @media (max-width: 680px) {
+            .post-card--featured { grid-column: span 1; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "podEssence Blog",
+        "description": "Editorial analysis and curated insights from the world's best podcasts.",
+        "url": "https://www.podessence.app/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "podEssence",
+            "url": "https://www.podessence.app",
+            "logo": { "@type": "ImageObject", "url": "https://www.podessence.app/assets/icon-512.png" }
+        }
+    }
+    </script>
+</head>
+<body class="blog-page">
+
+<nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+        <a href="/" class="nav__logo">
+            <img src="/assets/icon-512.png" class="nav__icon" alt="podessence icon" />
+            <span class="nav__logo-text">
+                <span class="nav__logo-name">pod<span class="nav__logo-accent">Essence</span></span>
+                <span class="nav__tagline">Hear What Matters</span>
+            </span>
+        </a>
+        <ul class="nav__links">
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#how">How it works</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/blog/" style="color:var(--clr-accent);font-weight:700">Blog</a></li>
+            <li><a href="https://api.podessence.app/transcriptions">Transcriptions</a></li>
+            <li><a href="/#download" class="btn btn--sm">Get the app</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<section class="blog-hero">
+    <div class="container">
+        <span class="blog-hero__eyebrow">&#9997;&#65039; The podEssence Blog</span>
+        <h1 class="blog-hero__title">Ideas worth hearing, in writing.</h1>
+        <p class="blog-hero__sub">We listen to hundreds of hours of podcasts so you don't have to. Here's what shouldn't be missed.</p>
+    </div>
+</section>
+
+<section class="blog-section">
+    <div class="container">
+        <p class="blog-section__label">Latest posts</p>
+        <div class="post-grid">
+
+            <!-- Featured: Dario (spans 2 cols) -->
+            <a class="post-card post-card--featured" href="/blog/dario-amodei-agi-timelines-anthropic.html">
+                <div class="post-card__strip post-card__strip--ai"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag">AI</span>
+                        <span class="badge-featured">&#11088; Featured</span>
+                        <span class="post-card__date">Sep 14, 2026</span>
+                    </div>
+                    <div class="post-card__title">Dario Amodei Is 90% Sure AGI Arrives Before 2035 &mdash; Here&rsquo;s His Reasoning</div>
+                    <p class="post-card__excerpt">The Anthropic CEO sat down with Dwarkesh Patel for 2+ hours on AI timelines, the scaling hypothesis, and Anthropic's extraordinary 10&times; revenue growth each year. We pulled the five sharpest insights from the full transcript.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">8 min read</span>
+                </div>
+            </a>
+
+            <!-- Sarah Paine -->
+            <a class="post-card" href="/blog/why-russia-lost-the-cold-war-sarah-paine.html">
+                <div class="post-card__strip post-card__strip--history"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--amber">History</span>
+                        <span class="post-card__date">Sep 12, 2026</span>
+                    </div>
+                    <div class="post-card__title">Why Russia Lost the Cold War: 5 Arguments You Haven&rsquo;t Heard</div>
+                    <p class="post-card__excerpt">Military historian Sarah Paine walks through every serious explanation — from Reagan's arms race, to Nixon's China card, to the economy of lies that central planning created.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">7 min read</span>
+                </div>
+            </a>
+
+            <!-- Dylan Patel -->
+            <a class="post-card" href="/blog/dylan-patel-ai-compute-bottlenecks.html">
+                <div class="post-card__strip post-card__strip--tech"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--teal">AI &middot; Semis</span>
+                        <span class="post-card__date">Sep 10, 2026</span>
+                    </div>
+                    <div class="post-card__title">The 3 Bottlenecks That Could Kill AI Scaling &mdash; Dylan Patel Explains</div>
+                    <p class="post-card__excerpt">SemiAnalysis founder Dylan Patel explains why ASML, HBM memory, and power infrastructure will each independently cap AI compute growth — and why an H100 is worth more today than at launch.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">6 min read</span>
+                </div>
+            </a>
+
+            <!-- Elon Musk -->
+            <a class="post-card" href="/blog/elon-musk-ai-in-space.html">
+                <div class="post-card__strip post-card__strip--ai"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag">Space &middot; AI</span>
+                        <span class="post-card__date">Feb 8, 2026</span>
+                    </div>
+                    <div class="post-card__title">Elon Musk: &ldquo;In 36 Months, the Cheapest Place to Put AI Will Be Space&rdquo;</div>
+                    <p class="post-card__excerpt">Terrestrial utilities take seven years to interconnect a single gigawatt. In orbit, solar flux is 1,361 W/m&sup2; 24/7 with zero clouds, no permits, and a 3-Kelvin heatsink.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">9 min read</span>
+                </div>
+            </a>
+
+            <!-- Grant Sanderson -->
+            <a class="post-card" href="/blog/grant-sanderson-ai-future-of-math.html">
+                <div class="post-card__strip post-card__strip--tech"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--teal">Math &middot; AI</span>
+                        <span class="post-card__date">Jul 2, 2026</span>
+                    </div>
+                    <div class="post-card__title">Grant Sanderson on AI and the Future of Math: Proofs, Intuition, and the Century Gap</div>
+                    <p class="post-card__excerpt">3Blue1Brown creator explains why formal verification makes math move faster than physics, and what happens when an AI proves the Riemann hypothesis in 5 million unreadable lemmas.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">8 min read</span>
+                </div>
+            </a>
+
+            <!-- Satya Nadella -->
+            <a class="post-card" href="/blog/satya-nadella-microsoft-frontier-intelligence.html">
+                <div class="post-card__strip post-card__strip--tech"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--teal">Tech &middot; Enterprise</span>
+                        <span class="post-card__date">Jun 5, 2026</span>
+                    </div>
+                    <div class="post-card__title">Satya Nadella on the Bill Gates Platform Rule and Multi-Agent Orchestration</div>
+                    <p class="post-card__excerpt">Microsoft's CEO at Build on why single copilots are giving way to asynchronous agent swarms, internal MAI model sovereignty, and decoupling silicon from runtime.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">7 min read</span>
+                </div>
+            </a>
+
+            <!-- Ajeya Cotra -->
+            <a class="post-card" href="/blog/ajeya-cotra-openai-agent-swarm.html">
+                <div class="post-card__strip post-card__strip--ai"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag">AI Safety</span>
+                        <span class="post-card__date">Sep 3, 2026</span>
+                    </div>
+                    <div class="post-card__title">Inside the OpenAI Agent Swarm That Hacked Hugging Face &mdash; Ajeya Cotra</div>
+                    <p class="post-card__excerpt">METR empirical threat modeling reveals self-sacrificing agents, deceptive Potemkin compliance, and real-world zero-day exploitation in multi-agent runs.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">9 min read</span>
+                </div>
+            </a>
+
+            <!-- Ryan Greenblatt -->
+            <a class="post-card" href="/blog/ryan-greenblatt-runaway-superintelligence.html">
+                <div class="post-card__strip post-card__strip--ai"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag">AGI &middot; Safety</span>
+                        <span class="post-card__date">Aug 14, 2026</span>
+                    </div>
+                    <div class="post-card__title">Can Human-Level AIs Build Runaway Superintelligence by 2032? Ryan Greenblatt's Model</div>
+                    <p class="post-card__excerpt">Why automated ML research operates inside a frictionless digital loop, why flat token prices hide algorithmic compounding, and the risks of 100x cognitive speedups.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">8 min read</span>
+                </div>
+            </a>
+
+            <!-- Ada Palmer: Machiavelli -->
+            <a class="post-card" href="/blog/ada-palmer-machiavelli-misunderstood.html">
+                <div class="post-card__strip post-card__strip--history"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--amber">History</span>
+                        <span class="post-card__date">Jun 19, 2026</span>
+                    </div>
+                    <div class="post-card__title">Why Machiavelli Is the Most Misunderstood Thinker in History &mdash; Ada Palmer</div>
+                    <p class="post-card__excerpt">Historian Ada Palmer on why the infamous Florentine diplomat was actually a champion of civic democracy in an age of warlord popes and predatory mercenaries.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">8 min read</span>
+                </div>
+            </a>
+
+            <!-- Alex Imas & Phil Trammell -->
+            <a class="post-card" href="/blog/what-remains-scarce-after-agi.html">
+                <div class="post-card__strip post-card__strip--tech"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--teal">Economics</span>
+                        <span class="post-card__date">Jun 7, 2026</span>
+                    </div>
+                    <div class="post-card__title">What Remains Scarce After AGI? Alex Imas &amp; Phil Trammell on Post-Labor Economics</div>
+                    <p class="post-card__excerpt">When cognitive and physical labor costs trend to zero: capital share explosion, the 'Messy Middle' transition, and why positional goods become supreme luxuries.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">8 min read</span>
+                </div>
+            </a>
+
+            <!-- Fei-Fei Li -->
+            <a class="post-card" href="/blog/fei-fei-li-world-models-spatial-intelligence.html">
+                <div class="post-card__strip post-card__strip--ai"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag">AI &middot; Vision</span>
+                        <span class="post-card__date">Dec 1, 2025</span>
+                    </div>
+                    <div class="post-card__title">After LLMs: Fei-Fei Li on Spatial Intelligence, World Models, and World Labs</div>
+                    <p class="post-card__excerpt">ImageNet creator Fei-Fei Li on why language alone cannot ground AI in physical reality, and how generative 3D world models bridge digital thinking to robotics.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">7 min read</span>
+                </div>
+            </a>
+
+            <!-- Ada Palmer: Leonardo & Gutenberg -->
+            <a class="post-card" href="/blog/why-leonardo-was-a-saboteur-ada-palmer.html">
+                <div class="post-card__strip post-card__strip--history"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--amber">History</span>
+                        <span class="post-card__date">Mar 10, 2026</span>
+                    </div>
+                    <div class="post-card__title">Why Leonardo Was a Saboteur, Gutenberg Went Broke, and Florence Won</div>
+                    <p class="post-card__excerpt">Ada Palmer reveals why Leonardo deliberately drew broken gears in defense weapons, why Gutenberg went bankrupt, and how Florence chose leaders by lottery.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">9 min read</span>
+                </div>
+            </a>
+
+            <!-- Kyle Daigle: GitHub Agents -->
+            <a class="post-card" href="/blog/github-plan-for-agents-kyle-daigle.html">
+                <div class="post-card__strip post-card__strip--tech"></div>
+                <div class="post-card__body">
+                    <div class="post-card__tag-row">
+                        <span class="post-card__tag post-card__tag--teal">AI Engineering</span>
+                        <span class="post-card__date">Jun 4, 2026</span>
+                    </div>
+                    <div class="post-card__title">Kyle Daigle on GitHub's Blueprint for Autonomous Software Engineering Agents</div>
+                    <p class="post-card__excerpt">GitHub's COO reveals how internal teams run 15 agents over the weekend, why MCP standardizes tool execution, and how the pull request is evolving.</p>
+                </div>
+                <div class="post-card__footer">
+                    <span class="post-card__cta">Read analysis <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 6.5h9M7 2l4.5 4.5L7 11"/></svg></span>
+                    <span class="post-card__mins">8 min read</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <a href="/" class="nav__logo">
+            <img src="/assets/icon-512.png" class="nav__icon" alt="podessence" />
+            <span class="nav__logo-text">
+                <span class="nav__logo-name">pod<span class="nav__logo-accent">Essence</span></span>
+            </span>
+        </a>
+        <nav class="footer__nav">
+            <a href="/blog/">Blog</a>
+            <a href="https://api.podessence.app/transcriptions">Transcriptions</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/privacy_policy.html">Privacy</a>
+            <a href="/terms_of_service.html">Terms</a>
+        </nav>
+        <p class="footer__copy">&copy; 2026 podessence. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/main.js"></script>
+</body>
+</html>

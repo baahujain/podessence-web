@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dario Amodei Is 90% Sure AGI Arrives Before 2035 | podEssence Blog</title>
+    <meta name="description" content="The Anthropic CEO lays out his reasoning for why AGI is coming within a decade, why the scaling hypothesis still holds, and how Anthropic's 10x revenue growth each year reflects the coming economic disruption." />
+    <link rel="canonical" href="https://www.podessence.app/blog/dario-amodei-agi-timelines-anthropic.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.podessence.app/blog/dario-amodei-agi-timelines-anthropic.html" />
+    <meta property="og:title" content="Dario Amodei Is 90% Sure AGI Arrives Before 2035" />
+    <meta property="og:description" content="Five sharpest insights from Dario Amodei's 2-hour conversation on AGI timelines, scaling, and Anthropic's revenue trajectory." />
+    <meta property="og:image" content="https://www.podessence.app/assets/icon-512.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8651445897536345" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-73VC5VH5HB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-73VC5VH5HB');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/assets/icon.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        .post-outer { max-width:1060px; margin:0 auto; padding:2.5rem 1.5rem 5rem; display:grid; grid-template-columns:1fr 260px; gap:3rem; align-items:start; } .post-layout { min-width:0; }
+        .blog-page { padding-top: 72px; }
+        .post-breadcrumb { display:flex; align-items:center; gap:8px; font-size:.8rem; color:var(--clr-muted); margin-bottom:2rem; }
+        .post-breadcrumb a { color:var(--clr-accent); font-weight:600; }
+        .post-breadcrumb span { color:var(--clr-faint); }
+        .post-header { margin-bottom:2.5rem; }
+        .post-tag-row { display:flex; align-items:center; gap:8px; margin-bottom:1rem; }
+        .post-tag { font-size:.65rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--clr-accent); background:#EDE9FE; padding:3px 9px; border-radius:9999px; }
+        .post-date { font-size:.78rem; color:var(--clr-muted); }
+        .post-title { font-size:clamp(1.7rem,4vw,2.4rem); font-weight:800; letter-spacing:-.04em; line-height:1.2; margin-bottom:1rem; }
+        .post-subtitle { font-size:1.1rem; color:var(--clr-muted); line-height:1.65; margin-bottom:1.5rem; }
+        .post-source { display:flex; align-items:center; gap:12px; padding:1rem 1.25rem; background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-md); margin-bottom:2rem; }
+        .post-source__label { font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--clr-muted); }
+        .post-source__title { font-size:.88rem; font-weight:600; color:var(--clr-text); }
+        .post-source__link { font-size:.78rem; color:var(--clr-accent); font-weight:600; margin-left:auto; white-space:nowrap; }
+        .post-body h2 { font-size:1.3rem; font-weight:800; letter-spacing:-.03em; line-height:1.3; margin:2.5rem 0 .75rem; color:var(--clr-text); }
+        .post-body p { font-size:1rem; line-height:1.75; color:#2D2D3A; margin-bottom:1.25rem; }
+        .post-body blockquote { border-left:3px solid var(--clr-accent); padding:.75rem 1.25rem; margin:1.5rem 0; background:#F5F3FF; border-radius:0 var(--radius-sm) var(--radius-sm) 0; }
+        .post-body blockquote p { font-size:.93rem; font-style:italic; color:#4B4B6A; margin-bottom:0; line-height:1.65; }
+        .post-body blockquote cite { display:block; font-size:.72rem; font-style:normal; font-weight:700; color:var(--clr-accent); margin-top:.5rem; }
+        .post-insight { border:1px solid var(--clr-border); border-radius:var(--radius-md); overflow:hidden; margin:2rem 0; }
+        .post-insight__head { background:var(--clr-accent); padding:.6rem 1rem; display:flex; align-items:center; gap:8px; }
+        .post-insight__num { font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.75); }
+        .post-insight__title { font-size:.88rem; font-weight:700; color:#fff; }
+        .post-insight__body { padding:1.2rem 1.25rem; }
+        .post-insight__body p { font-size:.93rem; margin-bottom:.85rem; color:#2D2D3A; line-height:1.7; }
+        .post-insight__body p:last-child { margin-bottom:0; }
+        .post-footer-cta { margin-top:3rem; padding:2rem; background:linear-gradient(135deg,#6D28D9,#7C3AED); border-radius:var(--radius-md); color:#fff; text-align:center; }
+        .post-footer-cta h3 { font-size:1.2rem; font-weight:800; margin-bottom:.5rem; }
+        .post-footer-cta p { font-size:.9rem; opacity:.85; margin-bottom:1.2rem; }
+        .btn--white { display:inline-flex; align-items:center; gap:6px; background:#fff; color:var(--clr-accent); font-size:.85rem; font-weight:700; padding:.55rem 1.3rem; border-radius:9999px; transition:opacity .2s; }
+        .btn--white:hover { opacity:.92; }
+        .ad-slot { margin:0; } .ad-slot:has(ins[data-ad-status="filled"]) { margin:2rem 0; }
+        .post-nav { display:flex; justify-content:space-between; gap:1rem; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--clr-border); }
+        .post-nav a { font-size:.85rem; font-weight:700; color:var(--clr-accent); }
+        /* sidebar */
+        .post-sidebar { padding-top:3rem; display:flex; flex-direction:column; gap:1.25rem; }
+        .sb-widget { background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-md); padding:1.1rem; }
+        .sb-widget__label { font-size:.65rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--clr-muted); margin-bottom:.85rem; }
+        .sb-ep__podcast { font-size:.75rem; color:var(--clr-muted); margin-bottom:.3rem; }
+        .sb-ep__title { font-size:.88rem; font-weight:700; line-height:1.4; color:var(--clr-text); margin-bottom:.35rem; }
+        .sb-ep__meta { font-size:.72rem; color:var(--clr-muted); margin-bottom:.6rem; }
+        .sb-ep__link { font-size:.8rem; font-weight:700; color:var(--clr-accent); }
+        .sb-post { display:flex; flex-direction:column; gap:5px; padding:.7rem 0; border-bottom:1px solid var(--clr-border); }
+        .sb-post:last-child { border-bottom:none; padding-bottom:0; }
+        .sb-post:first-of-type { padding-top:0; }
+        .sb-post__tag { font-size:.6rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--clr-accent); background:#EDE9FE; padding:2px 7px; border-radius:9999px; width:fit-content; }
+        .sb-post__tag--amber { color:#92400E; background:#FEF3C7; }
+        .sb-post__tag--teal { color:#164E63; background:#CFFAFE; }
+        .sb-post__title { font-size:.85rem; font-weight:600; line-height:1.4; color:var(--clr-text); }
+        .sb-post:hover .sb-post__title { color:var(--clr-accent); }
+        .sb-widget__copy { font-size:.83rem; color:var(--clr-muted); line-height:1.55; margin-bottom:.75rem; }
+        .sb-cta { display:inline-flex; font-size:.8rem; font-weight:700; color:var(--clr-accent); }
+        @media(max-width:780px) { .post-outer { grid-template-columns:1fr; } .post-sidebar { padding-top:0; } }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Dario Amodei Is 90% Sure AGI Arrives Before 2035 — Here's His Reasoning",
+        "description": "Five sharpest insights from Dario Amodei's 2-hour conversation on AGI timelines, scaling, and Anthropic's revenue trajectory.",
+        "datePublished": "2026-09-14",
+        "author": { "@type": "Organization", "name": "podEssence" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "podEssence",
+            "logo": { "@type": "ImageObject", "url": "https://www.podessence.app/assets/icon-512.png" }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.podessence.app/blog/dario-amodei-agi-timelines-anthropic.html" }
+    }
+    </script>
+</head>
+<body class="blog-page">
+
+<nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+        <a href="/" class="nav__logo">
+            <img src="/assets/icon-512.png" class="nav__icon" alt="podessence icon" />
+            <span class="nav__logo-text">
+                <span class="nav__logo-name">pod<span class="nav__logo-accent">Essence</span></span>
+                <span class="nav__tagline">Hear What Matters</span>
+            </span>
+        </a>
+        <ul class="nav__links">
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#how">How it works</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/blog/" style="color:var(--clr-accent);font-weight:700">Blog</a></li>
+            <li><a href="https://api.podessence.app/transcriptions">Transcriptions</a></li>
+            <li><a href="/#download" class="btn btn--sm">Get the app</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<div class="post-outer">
+<div class="post-layout">
+
+    <div class="post-breadcrumb">
+        <a href="/blog/">Blog</a>
+        <span>/</span>
+        <span>AI</span>
+    </div>
+
+    <header class="post-header">
+        <div class="post-tag-row">
+            <span class="post-tag">AI</span>
+            <span class="post-tag">AGI</span>
+            <span class="post-date">September 14, 2026 &nbsp;&middot;&nbsp; 8 min read</span>
+        </div>
+        <h1 class="post-title">Dario Amodei Is 90% Sure AGI Arrives Before 2035 &mdash; Here&rsquo;s His Reasoning</h1>
+        <p class="post-subtitle">The Anthropic CEO sat down with Dwarkesh Patel for a 2-hour marathon on AI timelines, the state of the scaling hypothesis, Anthropic's extraordinary revenue trajectory, and what he calls being "near the end of the exponential." Here are the five sharpest insights from the full transcript.</p>
+
+        <div class="post-source">
+            <div>
+                <div class="post-source__label">Source Episode</div>
+                <div class="post-source__title">Dario Amodei &mdash; &ldquo;We are near the end of the exponential&rdquo; &nbsp;&middot;&nbsp; Dwarkesh Podcast &nbsp;&middot;&nbsp; Feb 13, 2026 &nbsp;&middot;&nbsp; 2h 22m</div>
+            </div>
+            <a class="post-source__link" href="https://transcripts.podessence.app/episode-1851-dario-amodei-we-are-near-the-end-of-the-exponential.html" target="_blank" rel="noopener">Full transcript &#8594;</a>
+        </div>
+    </header>
+
+    <div class="post-body">
+
+        <p>When Dwarkesh Patel interviewed Dario Amodei three years ago, the Anthropic CEO was cautiously optimistic. In February 2026, he was close to certain. The conversation that followed was one of the densest AI discussions published this year &mdash; covering everything from why scaling still works, to why Anthropic's revenue has 10x'd every single year since 2023, to what the irreducible uncertainty around AGI really looks like.</p>
+
+        <p>We read the full 2-hour-22-minute transcript so you don't have to. Here are the five ideas that matter most.</p>
+
+        <div class="post-insight">
+            <div class="post-insight__head">
+                <span class="post-insight__num">Insight 1</span>
+                <span class="post-insight__title">The exponential is right on schedule &mdash; it&rsquo;s public perception that&rsquo;s lagging</span>
+            </div>
+            <div class="post-insight__body">
+                <p>Dario's biggest surprise from the last three years wasn't a technical development &mdash; it was the public's failure to notice how far things have come. The actual capability curve has tracked almost exactly what he expected: models progressing from "smart high school student" to "beginning PhD work" on a predictable trajectory.</p>
+                <blockquote>
+                    <p>"The most surprising thing has been the lack of public recognition of how close we are to the end of the exponential. To me, it is absolutely wild that you have people talking about these tired old political issues when we're near the end of the exponential."</p>
+                    <cite>&mdash; Dario Amodei, Feb 2026</cite>
+                </blockquote>
+                <p>What he calls "the end of the exponential" isn't AI stopping &mdash; it's AI reaching human-level capability across essentially all knowledge-work domains. His internal estimate for that: within three to five years.</p>
+            </div>
+        </div>
+
+        <div class="post-insight">
+            <div class="post-insight__head">
+                <span class="post-insight__num">Insight 2</span>
+                <span class="post-insight__title">He puts 90% probability on AGI before 2035 &mdash; and explains what the remaining 10% looks like</span>
+            </div>
+            <div class="post-insight__body">
+                <p>When Dwarkesh pressed him for an actual number, Dario gave one: 90% probability of "a country of geniuses in a data center" &mdash; his phrase for AGI &mdash; within ten years. He explained why he won't go above 90%:</p>
+                <blockquote>
+                    <p>"The world is so unpredictable. Maybe multiple companies have internal turmoil and nothing happens. Taiwan gets invaded and the fabs get blown up by missiles. You could construct a 5% world where things get delayed for ten years. That's maybe 5%."</p>
+                    <cite>&mdash; Dario Amodei</cite>
+                </blockquote>
+                <p>He also identified one technical uncertainty that he considers genuinely open: tasks that aren't verifiable. Coding and math can be graded by a computer. Planning a Mars mission, writing a landmark novel, or making a fundamental scientific discovery cannot. He's almost certain AI gets there, but not quite.</p>
+            </div>
+        </div>
+
+        <div class="post-insight">
+            <div class="post-insight__head">
+                <span class="post-insight__num">Insight 3</span>
+                <span class="post-insight__title">The scaling hypothesis still holds &mdash; and now it applies to RL too</span>
+            </div>
+            <div class="post-insight__body">
+                <p>Dario has held essentially the same hypothesis since 2017, which he called at the time the "big blob of compute hypothesis." The core claim: more compute, more data, a scalable objective function, and numerical stability are the only things that really matter. Everything else &mdash; clever techniques, novel architectures, bespoke methods &mdash; matters much less than most people assume.</p>
+                <p>Three years ago, the hypothesis was proven for pretraining scaling laws. In 2026, he's watching it hold for reinforcement learning too. RL performance on diverse tasks improves log-linearly with training time, just as pretraining loss did across orders of magnitude of compute. The same curve, a new domain.</p>
+                <p>His explanation for why task-specific RL generalizes to new tasks echoes the pretraining story: just as training on a broad internet scrape produced generalization in GPT-2 that narrow training sets never could, training on a broad enough distribution of RL tasks is now producing similar generalization in reasoning models.</p>
+            </div>
+        </div>
+
+        <div class="post-insight">
+            <div class="post-insight__head">
+                <span class="post-insight__num">Insight 4</span>
+                <span class="post-insight__title">Anthropic's revenue 10x'd every year since 2023. The curve is still steep.</span>
+            </div>
+            <div class="post-insight__body">
+                <p>Dario laid out a number that's easy to breeze past: Anthropic's revenue has grown by roughly 10x every year since 2023. Zero to $100M in 2023. $100M to $1B in 2024. $1B to $9-10B in 2025. And then, in just the first month of 2026, several more billion added on top.</p>
+                <blockquote>
+                    <p>"Obviously, that curve can't go on forever &mdash; the GDP is only so large. I would even guess that it bends somewhat this year. But that is a really fast curve. And I would bet it stays pretty fast even as the scale goes to the entire economy."</p>
+                    <cite>&mdash; Dario Amodei</cite>
+                </blockquote>
+                <p>His framing: the economic adoption of AI isn't instant (you still need change management, security approvals, old software rewritten), but it's also not slow. It's the fastest technology diffusion in history, just not infinitely fast. This "middle world" framing is his answer to both the AI bears (who cite diffusion lag) and the AI acceleration crowd (who expect recursive self-improvement to compress decades into months).</p>
+            </div>
+        </div>
+
+        <div class="post-insight">
+            <div class="post-insight__head">
+                <span class="post-insight__num">Insight 5</span>
+                <span class="post-insight__title">The monopoly risk worries him more than the technical risk</span>
+            </div>
+            <div class="post-insight__body">
+                <p>In one of the conversation's more surprising turns, Dario said that what keeps him up at night isn't the question of whether AI works &mdash; it's the question of who controls it. He talked about the risk of any single entity, whether a government, a company, or even Anthropic itself, gaining disproportionate control over AGI and using it to lock in a particular political or economic order.</p>
+                <p>His preferred outcome: a world that looks roughly like today's liberal democratic order, but with everyone being roughly 10-50x wealthier and healthier &mdash; a "broadly positive" distribution of AGI's gains rather than a winner-take-all concentration. He's uncertain enough about how to get there that he discusses it as an active area of work at Anthropic, not a solved problem.</p>
+            </div>
+        </div>
+
+        <h2>The bottom line</h2>
+
+        <p>If you believe Dario &mdash; and he's one of the few people in the world with a track record on this &mdash; the decade ahead is going to be unlike anything in economic history. Revenue curves are already suggesting it. The scaling laws are still running. And the uncertainty that remains is less about whether, and more about when and who benefits.</p>
+
+        <p>The full 2h22m conversation with Dwarkesh Patel is worth your time if you want the complete picture. We've linked the full transcript below &mdash; searchable, chapter-indexed, and annotated with key entities.</p>
+
+        <div class="post-footer-cta">
+            <h3>Read the full transcript</h3>
+            <p>Timestamped, chapter-indexed, and annotated &mdash; every word of the 2h 22m conversation.</p>
+            <a class="btn--white" href="https://transcripts.podessence.app/episode-1851-dario-amodei-we-are-near-the-end-of-the-exponential.html" target="_blank" rel="noopener">Open full transcript &#8594;</a>
+        </div>
+
+    </div>
+
+    <nav class="post-nav">
+        <a href="/blog/">&larr; All posts</a>
+        <a href="/blog/why-russia-lost-the-cold-war-sarah-paine.html">Next: Why Russia Lost the Cold War &rarr;</a>
+    </nav>
+</div><!-- /post-layout -->
+
+<aside class="post-sidebar">
+    <div class="sb-widget">
+        <div class="sb-widget__label">About this episode</div>
+        <div class="sb-widget__ep">
+            <div class="sb-ep__podcast">&#127911; Dwarkesh Podcast</div>
+            <div class="sb-ep__title">Dario Amodei &mdash; &ldquo;We are near the end of the exponential&rdquo;</div>
+            <div class="sb-ep__meta">Feb 13, 2026 &nbsp;&middot;&nbsp; 2h 22m</div>
+            <a class="sb-ep__link" href="https://transcripts.podessence.app/episode-1851-dario-amodei-we-are-near-the-end-of-the-exponential.html" target="_blank" rel="noopener">Full transcript &#8594;</a>
+        </div>
+    </div>
+    <div class="sb-widget">
+        <div class="sb-widget__label">More posts</div>
+        <a class="sb-post" href="/blog/why-russia-lost-the-cold-war-sarah-paine.html">
+            <span class="sb-post__tag sb-post__tag--amber">History</span>
+            <span class="sb-post__title">Why Russia Lost the Cold War: 5 Arguments You Haven&rsquo;t Heard</span>
+        </a>
+        <a class="sb-post" href="/blog/dylan-patel-ai-compute-bottlenecks.html">
+            <span class="sb-post__tag sb-post__tag--teal">AI &middot; Semis</span>
+            <span class="sb-post__title">The 3 Bottlenecks That Could Kill AI Scaling</span>
+        </a>
+    </div>
+    <div class="sb-widget">
+        <div class="sb-widget__label">Try podEssence</div>
+        <p class="sb-widget__copy">Get the app to listen to podcasts and see only the moments worth your time.</p>
+        <a class="sb-cta" href="/#download">Get the app &#8594;</a>
+    </div>
+</aside>
+
+</div><!-- /post-outer -->
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <a href="/" class="nav__logo">
+            <img src="/assets/icon-512.png" class="nav__icon" alt="podessence" />
+            <span class="nav__logo-text">
+                <span class="nav__logo-name">pod<span class="nav__logo-accent">Essence</span></span>
+            </span>
+        </a>
+        <nav class="footer__nav">
+            <a href="/blog/">Blog</a>
+            <a href="https://api.podessence.app/transcriptions">Transcriptions</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/privacy_policy.html">Privacy</a>
+            <a href="/terms_of_service.html">Terms</a>
+        </nav>
+        <p class="footer__copy">&copy; 2026 podessence. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/main.js"></script>
+</body>
+</html>
